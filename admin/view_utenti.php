@@ -26,7 +26,7 @@ if (!isset($_SESSION['admin_loggato'])) {
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="bg-primary">Utenti</h3>
+                <h3 class="bg-info">Utenti</h3>
                 <hr>
                 <table class="table table-bordered" style=" text-align:center">
                     <tr style="font-size:18px; text-align:center">

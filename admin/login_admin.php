@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
 <body>
 
     <div class="container">
-        <h2 class="bg-success">Login admin</h2>
+        <h2 class="bg-info">Login admin</h2>
         <div class="col-sm-6">
             <form action="" method="POST">
                 <div class="form-group">
@@ -44,7 +44,7 @@ if(isset($_POST['submit'])){
                 </div>
                 <strong><?php if (isset($messaggio_errore)) echo $messaggio_errore; ?></strong>
                 <br>
-                <input type="submit" name="submit" value="Login" class="btn btn-success">
+                <input type="submit" name="submit" value="Login" class="btn btn-info">
             </form>
         </div>
         <hr>

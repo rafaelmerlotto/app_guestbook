@@ -25,7 +25,7 @@ if(!isset($_SESSION['admin_loggato']))
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="page-header bg-success">
+                <h3 class="page-header bg-info">
                     Gestione degli iscritti
                 </h3>
 
@@ -44,7 +44,7 @@ if(!isset($_SESSION['admin_loggato']))
                     $nome = $_POST['nome'];
                     $password = $_POST['password'];
 
-                    $query = "INSERT INTO utente (nome, password) VALUES  ('$nome' , '$password')";
+                    $query = "INSERT INTO utenti (nome, password) VALUES  ('$nome' , '$password')";
 
                     $creaUtenti = mysqli_query($connessione, $query);
 
@@ -69,7 +69,7 @@ if(!isset($_SESSION['admin_loggato']))
                     </div>
 
                     <div class="form-group">
-                        <input type="submit" name="submit" value="Aggiungi" class="btn btn-success">
+                        <input type="submit" name="submit" value="Aggiungi" class="btn btn-info">
                     </div>
                 </form>
 

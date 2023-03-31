@@ -7,6 +7,12 @@ require_once("../config/config.php");
 if (!isset($_SESSION['user_loggato'])) {
     header("Location:login.php");
 }
+
+if (!isset($_SESSION['utente'])) {
+    header("Location:login.php");
+} else {
+    echo "<h3 class='btn btn-success' > Ciao " . $_SESSION['utente'] . " sei connesso </h3>" . "<hr>";
+}
   
 
 ?>
@@ -26,7 +32,7 @@ if (!isset($_SESSION['user_loggato'])) {
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="bg-primary">Messaggi</h3>
+                <h3 class="bg-success">Messaggi</h3>
                 <hr>
                 <table class="table table-bordered" style=" text-align:center">
                     <tr style="font-size:18px; text-align:center">

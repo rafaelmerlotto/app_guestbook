@@ -7,7 +7,7 @@ ob_start();
 if (!isset($_SESSION['utente'])) {
     header("Location:login.php");
 } else {
-    echo "<h3 class='btn btn-success' > Ciao utente " . $_SESSION['utente'] . " sei connesso </h3>" . "<hr>";
+    echo "<h3 class='btn btn-success' > Ciao " . $_SESSION['utente'] . " sei connesso </h3>" . "<hr>";
 }
 
 
@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
             die("query fallita" . mysqli_error($connessione));
         }
 
-        $avviso = "<p class='btn btn-info'>Messaggio inviato con successo</p>";
+        $avviso = "<p class='btn btn-success'>Messaggio inviato con successo</p>";
     } else {
         $avviso = "<p class='btn btn-danger'>I campi non devono essere vuoti</p>";
     }
@@ -52,6 +52,7 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guestbook</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    
 </head>
 
 <body>
@@ -60,7 +61,7 @@ if (isset($_POST['submit'])) {
 
     <div class="container">
        
-        <h3 class="bg-primary">Aggiungi un nuovo messaggio</h3>
+        <h3 class="bg-success">Aggiungi un nuovo messaggio</h3>
         <div class="col-sm-6">
 
             <form action="" method="POST">
@@ -76,7 +77,7 @@ if (isset($_POST['submit'])) {
                 </div>
 
 
-                <input type="submit" name="submit" value="invia" class="btn btn-primary">
+                <input type="submit" name="submit" value="invia" class="btn btn-success">
             </form>
         </div>
         <?php echo $avviso; ?>
