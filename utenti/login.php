@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "config.php";
+require_once("../config/config.php");
 
 
 if (isset($_POST['submit'])) {
@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['utente']     = $row['nome'];
         $_SESSION['user_loggato']   = 1;
 
-        header("Location: guestbook.php");
+        header("Location:guestbook.php");
     } else {
         $messaggio_errore = "Nome o Password errate!!!";
     }

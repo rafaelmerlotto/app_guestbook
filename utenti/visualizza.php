@@ -1,16 +1,13 @@
 <?php
 session_start();
-include('config.php');
+//include('config/config.php');
+require_once("../config/config.php");
 
 
-/* if (!isset($_SESSION['user_loggato'])) {
+if (!isset($_SESSION['user_loggato'])) {
     header("Location:login.php");
-} */
-
-if (!isset($_SESSION['admin_loggato'])){
-    header("Location:amministratore.php");
 }
-    
+  
 
 ?>
 
@@ -31,7 +28,7 @@ if (!isset($_SESSION['admin_loggato'])){
             <div class="col-lg-12">
                 <h3 class="bg-primary">Messaggi</h3>
                 <hr>
-                <table class="table table-bordered">
+                <table class="table table-bordered" style=" text-align:center">
                     <tr style="font-size:18px; text-align:center">
                         <th>Nome</th>
                         <th>Messaggio</th>

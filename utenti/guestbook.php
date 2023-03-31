@@ -1,6 +1,7 @@
 <?php
 session_start();
-include('config.php');
+//include('config.php');
+require_once("../config/config.php");
 ob_start();
 
 if (!isset($_SESSION['utente'])) {

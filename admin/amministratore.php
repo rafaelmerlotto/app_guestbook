@@ -1,6 +1,7 @@
 <?php 
 session_start();
-include("config.php"); 
+//include("config.php");
+require_once("../config/config.php");
 
 if(!isset($_SESSION['admin_loggato']))
     header("Location:login_admin.php");
@@ -18,6 +19,8 @@ if(!isset($_SESSION['admin_loggato']))
 </head>
 
 <body>
+
+<a href="logout_admin.php" type="buttom" class='btn btn-danger position-absolute top-50 end-50' >Logout</a>
 
     <div class="container">
         <div class="row">
@@ -80,9 +83,9 @@ if(!isset($_SESSION['admin_loggato']))
 
                 if (isset($_POST['delete'])) {
 
-                    $utenteId = $_POST['id'];
+                    $idUtente = $_POST['id'];
 
-                    $query = "DELETE FROM utente WHERE idutente = $utenteId";
+                    $query = "DELETE FROM utenti WHERE id_utente = $idUtente";
 
                     if (!mysqli_query($connessione, $query)) {
                         die('Query per la cancellazione fallita' . mysqli_error($connessione));
@@ -102,15 +105,19 @@ if(!isset($_SESSION['admin_loggato']))
                     </div>
                 </form>
 
+        
                 <hr>
+
+
+                <!--  Cancella i messaggi -->
 
                 <?php
 
-                if (isset($_POST['deletemessaggio'])) {
+                if (isset($_POST['delete_messaggio'])) {
 
-                    $messaggioId = $_POST['idmessaggio'];
+                    $idMessaggio = $_POST['id_messaggio'];
 
-                    $query2 = "DELETE FROM guestbook WHERE idmessaggio = $messaggioId";
+                    $query2 = "DELETE FROM guestbook WHERE id_messaggio = $idMessaggio";
 
                     if (!mysqli_query($connessione, $query2)) {
                         die('Query per la cancellazione fallita' . mysqli_error($connessione));
@@ -121,20 +128,21 @@ if(!isset($_SESSION['admin_loggato']))
                     <h3>Cancella messaggio</h3>
 
                     <div class="form-group">
-                        <label for="idmessaggio">ID messaggio</label>
-                        <input type="number" name="idmessaggio" class="form-control">
+                        <label for="id_messaggio">ID messaggio</label>
+                        <input type="number" name="id_messaggio" class="form-control">
                     </div>
 
                     <div class="form-group">
-                        <input type="submit" name="deletemessaggio" value="Cancella" class="btn btn-danger">
+                        <input type="submit" name="delete_messaggio" value="Cancella" class="btn btn-danger">
                     </div>
                 </form>
-
+    
             </div>
         </div>
 
         <hr>
-        <a href="visualizza.php">Visualizza i messaggi</a>
+        <a href="view_msg.php">Visualizza i messaggi</a><br>
+        <a href="view_utenti.php">Visualizza gli utenti</a>
 
 
 </body>
