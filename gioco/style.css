@@ -1,0 +1,34 @@
+.campo {
+    width: 333px;
+    height: 200px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.giocatori {
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.giocatore1, .giocatore2 {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:60px;
+    
+}
+.nome{
+    display: flex;
+  
+}
+

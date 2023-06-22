@@ -13,15 +13,21 @@
 <body>
 
 
-   <h3>GUESTBOOK</h3>
+    <h3>GUESTBOOK</h3>
     <div id="container" class="container border ">
-        <div class="text-center" >
-            <div class="box-btn">
-                <a href="./utenti/login.php" type="button" class="btn btn-outline-success btn-lg ">Accesso utente</a>
-                <a href="./admin/login_admin.php" type="button" class="btn btn-outline-info btn-lg">Accesso Admin</a>
+        <div class="box-btn">
+            <a href="./utenti/login.php" type="button" class="btn btn-outline-success btn-lg ">Accesso utente</a>
+            <a href="./admin/login_admin.php" type="button" class="btn btn-outline-info btn-lg">Accesso Admin</a>
+        </div><br><br>
+        <div class="text-center">
+            <div class="btn">
+                <a href="./App/index.html" type="button" class="btn btn-outline-warning btn-lg">App</a>
             </div>
         </div>
     </div>
+
+
+
 
 </body>
 

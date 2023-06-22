@@ -83,7 +83,7 @@ if (isset($_POST['submit'])) {
         <?php echo $avviso; ?>
         <hr>
         <a href="visualizza.php">Visualizza i messaggi</a>
-
+       
     </div>
 
 
